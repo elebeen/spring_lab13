@@ -9,7 +9,7 @@ services:
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/microservicio_db
       - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=admin
+      - SPRING_DATASOURCE_PASSWORD=rootpassword
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
     depends_on:
       - db
@@ -19,7 +19,7 @@ services:
   db:
     image: mysql:8.0
     environment:
-      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_ROOT_PASSWORD=rootpassword
       - MYSQL_USER=root
       - MYSQL_DATABASE=microservicio_db
     ports:
